@@ -1,0 +1,148 @@
+html,
+body {
+  height: 100%;
+  width:100%;
+}
+
+body {
+  display: flex;
+  background-image: url("../../../assets/images/ummeedbackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-loan {
+  width: 100%;
+  margin: auto;
+  height: 300px;
+  width: 720px;
+  max-width: 720px;
+  padding-left: 90px;
+}
+
+.form-loan .checkbox {
+  font-weight: 400;
+}
+
+.form-loan .form-floating:focus-within {
+  z-index: 1;
+}
+
+.form-loan input[type="loanamount"] {
+  margin-bottom: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  
+}
+
+.form-loan input[type="purpose"] {
+  margin-bottom: 2px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 300px;
+  width: 720px;
+  max-width: 720px;
+  margin: auto;
+  padding-left: 90px;
+}
+
+.form-inline label {
+  padding: 1px;
+  color: rgb(0, 14, 0);
+  font-family:arial;
+  font-weight: 400;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  padding: 1px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-top-left-radius:2px;  
+  border-top-right-radius:2px;  
+  border-bottom-right-radius:2px;  
+  border-bottom-left-radius:2px;
+  height: 27px;
+  width: 200px;
+}
+
+.form-inline .form-select {
+  vertical-align: middle;
+  margin: 1px 1px 1px 1;
+  padding: 1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-left-radius:2px;  
+  border-top-right-radius:2px;  
+  border-bottom-right-radius:2px;  
+  border-bottom-left-radius:2px;
+  height: 27px;
+  width: 198px;
+}
+
+.form-inline .form-loanquerysubmit-button {
+	padding: 1px 1px;
+	background-color: forestgreen;
+	border: 2px solid #ddd;
+	border-color:white;
+	color: white;
+	cursor: pointer;
+	border-top-left-radius:10px;  
+	border-top-right-radius:10px;  
+	border-bottom-right-radius:10px;  
+	border-bottom-left-radius:10px;
+	height: 30px;
+	width: 615px;
+	font-size: large;
+	font-family:arial;
+	
+}
+
+.form-inline button:hover {
+  background-color: rgb(4, 4, 124);
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: row;
+    align-items: normal;
+  }
+}
+
+.navbar-brand {
+	font-size: large;
+	color: white;
+	font-family:arial;
+	font-weight: 1500;
+	
+}
+
+.nav-link {
+	font-size: normal;
+	color: rgba(44, 2, 61, 0.596);
+	font-family:arial;
+	font-weight: 1200;
+}
+
+.loan-provider-text {
+  vertical-align: middle;
+	color: white;
+	font-family:arial;
+	font-weight: 800;
+}
+
+
+
+
+

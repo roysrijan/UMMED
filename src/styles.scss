@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Open Sans";
+  background-image: url('./assets/images/ummeedbackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.link-white{
+  color: white;
+}
+
+.link-white:hover{
+  color: #444;
+}

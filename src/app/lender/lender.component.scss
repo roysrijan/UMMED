@@ -1,0 +1,159 @@
+html,
+body {
+  height: 100%;
+  width:100%;
+}
+
+body {
+  display: flex;
+  background-image: url("../../assets/images/ummeedbackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  alignment: center;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 1;
+}
+
+.form-signin input[type="username"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 350px;
+  width: 500px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.form-inline label {
+  margin: 20px 20px 20px 10;
+  color: forestgreen;
+  font-size: large;
+  font-family:arial;
+  font-weight: 900;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 2px 2px 2px 2;
+  padding: 2px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-top-left-radius:2px;  
+  border-top-right-radius:2px;  
+  border-bottom-right-radius:2px;  
+  border-bottom-left-radius:2px;
+  height: 40px;
+  width: 300px;
+}
+
+.form-inline .form-select {
+  vertical-align: middle;
+  margin: 2px 2px 2px 0;
+  padding: 2px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top-left-radius:2px;  
+  border-top-right-radius:2px;  
+  border-bottom-right-radius:2px;  
+  border-bottom-left-radius:2px;
+  height: 40px;
+  width: 300px;
+}
+
+.form-inline .form-signup-button {
+	padding: 5px 5px;
+	background-color: forestgreen;
+	border: 2px solid #ddd;
+	border-color:white;
+	color: white;
+	cursor: pointer;
+	border-top-left-radius:10px;  
+	border-top-right-radius:10px;  
+	border-bottom-right-radius:10px;  
+	border-bottom-left-radius:10px;
+	height: 42px;
+	width: 130px;
+	font-size: large;
+	font-family:arial;
+	
+}
+
+.form-inline .form-login-button {
+	padding: 5px 5px;
+	background-color: SlateBlue;
+	border: 2px solid #ddd;
+	border-color:white;
+	color: white;
+	cursor: pointer;
+	border-top-left-radius:10px;  
+	border-top-right-radius:10px;  
+	border-bottom-right-radius:10px;  
+	border-bottom-left-radius:10px;
+	height: 42px;
+	width: 130px;
+	font-size: large;
+	font-family:arial;
+	
+}
+
+.form-inline button:hover {
+  background-color: rgb(4, 4, 124);
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.navbar-brand {
+	font-size: large;
+	color: white;
+	font-family:arial;
+	font-weight: 1500;
+	
+}
+
+.nav-link {
+	font-size: normal;
+	color: rgba(44, 2, 61, 0.596);
+	font-family:arial;
+	font-weight: 1200;
+}
+
+
+
+
+
