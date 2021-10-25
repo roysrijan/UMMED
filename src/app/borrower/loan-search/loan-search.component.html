@@ -1,118 +1,87 @@
-
-    <nav class="navbar navbar-expand-md fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand link-white" href="login.html">
-          <span style="font-size: 1.3em;">UMMEED</span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link link-white active" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="lender/homepage.html">Lender</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Library</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <br />
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-6 p-4">
-          <br />
-          <br />
-          <h2 class="loan-provider-text text-center">
-            Search for a loan provider
-          </h2>
-          <br>
-          <div class="border p-4">
-            <form class="" method="get" action="/borrower/search-result">
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="">How much loan do you need?</label>
-                </div>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" />
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="">Purpose for your loan</label>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control" id="role">
-                    <option value="Borrower">Medical</option>
-                    <option value="MF Credit Provider">Business</option>
-                    <option value="Retail Lender">Education</option>
-                    <option value="Retail Lender">Other</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="">
-                    What is your monthly income (INR) ?
-                  </label>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control" id="income">
-                    <option value="5000">< 5000</option>
-                    <option value="5000-10000">5000-10000</option>
-                    <option value="5000-10000">10000-15000</option>
-                    <option value="5000-10000">> 15000</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="">
-                    Preferred tenure (in months) ?
-                  </label>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control" id="income">
-                    <option value="6">6 Months</option>
-                    <option value="12">12 Months</option>
-                    <option value="24">24 Months</option>
-                    <option value="36">36 Months</option>
-                    <option value="48">48 Months</option>
-                    <option value="60">60 Months</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label for="">
-                    Are you associated with any of the SHG listed?
-                  </label>
-                </div>
-                <div class="col-md-6">
-                  <select class="form-control" id="income">
-                    <option selected>No</option>
-                    <option value="Annapurna SHG">Annapurna SHG</option>
-                    <option value="Matribhoomi SHG">Matribhoomi SHG</option>
-                  </select>
-                </div>
-              </div>
-              <div class="text-right">
-                <button class="btn btn-success" type="submit">
-                  Search for loans
-                </button>
-              </div>
-            </form>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8 p-4">
+      <h2 class="text-center">
+        Search for a loan provider
+      </h2>
+      <br />
+      <div class="border p-4">
+        <form class="" method="get" action="/borrower/search-result">
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="">How much loan do you need?</label>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" />
+            </div>
           </div>
-        </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="">Purpose for your loan</label>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" id="role">
+                <option value="Borrower">Medical</option>
+                <option value="MF Credit Provider">Business</option>
+                <option value="Retail Lender">Education</option>
+                <option value="Retail Lender">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="">
+                What is your monthly income (INR) ?
+              </label>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" id="income">
+                <option value="5000">< 5000</option>
+                <option value="5000-10000">5000-10000</option>
+                <option value="5000-10000">10000-15000</option>
+                <option value="5000-10000">> 15000</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="">
+                Preferred tenure (in months) ?
+              </label>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" id="income">
+                <option value="6">6 Months</option>
+                <option value="12">12 Months</option>
+                <option value="24">24 Months</option>
+                <option value="36">36 Months</option>
+                <option value="48">48 Months</option>
+                <option value="60">60 Months</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-6">
+              <label for="">
+                Are you associated with any of the SHG listed?
+              </label>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" id="income">
+                <option selected>No</option>
+                <option value="Annapurna SHG">Annapurna SHG</option>
+                <option value="Matribhoomi SHG">Matribhoomi SHG</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-right">
+            <button class="btn btn-success" type="submit">
+              Search for loans
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="col-md-2"></div>
     </div>
+  </div>
+</div>
