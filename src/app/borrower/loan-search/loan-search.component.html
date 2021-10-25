@@ -35,7 +35,8 @@
             </div>
             <div class="col-md-6">
               <select class="form-control" id="income">
-                <option value="5000">< 5000</option>
+                <option value="5000">
+                  < 5000</option>
                 <option value="5000-10000">5000-10000</option>
                 <option value="5000-10000">10000-15000</option>
                 <option value="5000-10000">> 15000</option>
@@ -79,6 +80,72 @@
             </button>
           </div>
         </form>
+      </div>
+      <h4 class="text-center">My active loans</h4>
+      <br>
+      <table class="table table-striped">
+        <tr>
+          <th>Loan no</th>
+          <th>Lender Name</th>
+          <th>Lender Type</th>
+          <th>Amount</th>
+          <th>EMI</th>
+          <th>Tenure</th>
+          <th>EMI Paid</th>
+          <th>EMI remaining</th>
+          <th>Pay EMI</th>
+        </tr>
+        <tr>
+          <td>102222</td>
+          <td>Annapurna MF</td>
+          <td>MFI</td>
+          <td>10000</td>
+          <td>1122</td>
+          <td>10</td>
+          <td>5</td>
+          <td>5</td>
+          <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">Pay EMI</button></td>
+        </tr>
+        <tr>
+          <td>102222</td>
+          <td>Navyug Retail Lender</td>
+          <td>Retail Lender</td>
+          <td>10000</td>
+          <td>1122</td>
+          <td>10</td>
+          <td>5</td>
+          <td>5</td>
+          <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">Pay EMI</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+</div>
+
+
+<div class="modal fade" id="emiModal" tabindex="-1" role="dialog" aria-labelledby="emiModal" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        Pay EMI
+      </div>
+      <div class="modal-body">
+        <p>You will be paying an amount of 1122 for Annapurna MF.</p>
+        <p>You will be redirected to payment gateway once you click the below button</p>
+        <a href="success-message" class="btn btn-success">Pay EMI Securely</a>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
       </div>
     </div>
   </div>
