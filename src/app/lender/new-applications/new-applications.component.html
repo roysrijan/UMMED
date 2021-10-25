@@ -1,142 +1,163 @@
 <div class="container-fluid h-100">
   <div class="row h-100">
-    <div class="col-md-2 h-100 p-2 menu">
-      <h4 class="mt-4 text-center">Menu</h4>
-      <br />
-      <a class="d-block p-3" href="./lender/new-applications">
-        New Applications
-      </a>
-      <a class="d-block p-3" href="./lender/ongoing">Ongoing loans</a>
-    </div>
-    <div class="col-md-10">
-      <div class="card">
+    <div class="col-md-2 h-100">
+      <div class="card h-100" style="background-color: rgba(245, 245, 245, .75);">
         <div class="card-body">
-          <div class="card-header">
-            <h4 class="text-primary">New Applications</h4>
+          <h4 class="mt-4 text-center">Menu</h4>
+          <br />
+          <a class="d-block p-3" href="./lender/new-applications">
+            New Applications
+          </a>
+          <a class="d-block p-3" href="./lender/ongoing">Ongoing loans</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 h-100" >
+      <div class="card h-100" style="background-color: rgba(245, 245, 245, .75);">
+        <div class="card-body">
+          <div class="p-2">
+            <h4 class="p-2">New Applications</h4>
+            <br>
+            <table class="table table-bordered">
+              <tr>
+                <th>Application No</th>
+                <th>Name</th>
+                <th>Loan Amount</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1002202</td>
+                <td>Amit Karmakar</td>
+                <td>10000</td>
+                <td>
+                  <button
+                    class="btn btn-sm mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    View
+                  </button>
+                  <a
+                    href="approve-application.html"
+                    class="btn btn-success btn-sm mr-2"
+                  >
+                    Approve
+                  </a>
+                  <a
+                    href="reject-application.html"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Reject
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>1002202</td>
+                <td>Ashok Subramanian</td>
+                <td>10000</td>
+                <td>
+                  <button
+                    class="btn btn-sm mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    View
+                  </button>
+                  <a
+                    href="approve-application.html"
+                    class="btn btn-success btn-sm mr-2"
+                  >
+                    Approve
+                  </a>
+                  <a
+                    href="reject-application.html"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Reject
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>1002202</td>
+                <td>Dwipanita Maity</td>
+                <td>10000</td>
+                <td>
+                  <button
+                    class="btn btn-sm mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    View
+                  </button>
+                  <a
+                    href="approve-application.html"
+                    class="btn btn-success btn-sm mr-2"
+                  >
+                    Approve
+                  </a>
+                  <a
+                    href="reject-application.html"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Reject
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>1002202</td>
+                <td>Krishanu Khan</td>
+                <td>10000</td>
+                <td>
+                  <button
+                    class="btn btn-sm mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    View
+                  </button>
+                  <a
+                    href="approve-application.html"
+                    class="btn btn-success btn-sm mr-2"
+                  >
+                    Approve
+                  </a>
+                  <a
+                    href="reject-application.html"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Reject
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>1002202</td>
+                <td>Joydeep Guha</td>
+                <td>10000</td>
+                <td>
+                  <button
+                    class="btn btn-sm mr-2 btn-primary"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  >
+                    View
+                  </button>
+                  <a
+                    href="approve-application.html"
+                    class="btn btn-success btn-sm mr-2"
+                  >
+                    Approve
+                  </a>
+                  <a
+                    href="reject-application.html"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Reject
+                  </a>
+                </td>
+              </tr>
+            </table>
           </div>
-          <table class="table table-striped">
-            <tr>
-              <th>Application No</th>
-              <th>Name</th>
-              <th>Loan Amount</th>
-              <th>Action</th>
-            </tr>
-            <tr>
-              <td>1002202</td>
-              <td>Amit Karmakar</td>
-              <td>10000</td>
-              <td>
-                <button
-                  class="btn btn-sm mr-2 btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  View
-                </button>
-                <a
-                  href="approve-application.html"
-                  class="btn btn-success btn-sm mr-2"
-                >
-                  Approve
-                </a>
-                <a href="reject-application.html" class="btn btn-danger btn-sm">
-                  Reject
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>1002202</td>
-              <td>Ashok Subramanian</td>
-              <td>10000</td>
-              <td>
-                <button
-                  class="btn btn-sm mr-2 btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  View
-                </button>
-                <a
-                  href="approve-application.html"
-                  class="btn btn-success btn-sm mr-2"
-                >
-                  Approve
-                </a>
-                <a href="reject-application.html" class="btn btn-danger btn-sm">
-                  Reject
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>1002202</td>
-              <td>Dwipanita Maity</td>
-              <td>10000</td>
-              <td>
-                <button
-                  class="btn btn-sm mr-2 btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  View
-                </button>
-                <a
-                  href="approve-application.html"
-                  class="btn btn-success btn-sm mr-2"
-                >
-                  Approve
-                </a>
-                <a href="reject-application.html" class="btn btn-danger btn-sm">
-                  Reject
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>1002202</td>
-              <td>Krishanu Khan</td>
-              <td>10000</td>
-              <td>
-                <button
-                  class="btn btn-sm mr-2 btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  View
-                </button>
-                <a
-                  href="approve-application.html"
-                  class="btn btn-success btn-sm mr-2"
-                >
-                  Approve
-                </a>
-                <a href="reject-application.html" class="btn btn-danger btn-sm">
-                  Reject
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td>1002202</td>
-              <td>Suvadip Banerjee</td>
-              <td>10000</td>
-              <td>
-                <button
-                  class="btn btn-sm mr-2 btn-primary"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  View
-                </button>
-                <a
-                  href="approve-application.html"
-                  class="btn btn-success btn-sm mr-2"
-                >
-                  Approve
-                </a>
-                <a href="reject-application.html" class="btn btn-danger btn-sm">
-                  Reject
-                </a>
-              </td>
-            </tr>
-          </table>
+
           <div
             class="modal fade"
             id="exampleModal"
@@ -189,13 +210,17 @@
                   </div>
                   <p>SHG Affiliation:</p>
                   <p>Affiliated SHG Name:</p>
-                  <hr>
+                  <hr />
                   <div class="row">
                     <div class="col">
-                      <p>Social Rating</p>
+                      <p style="line-height: 100px">Social Rating</p>
                     </div>
                     <div class="col text-right">
-                      <img src="assets/images/high-risk.jpg" alt="" style="height: 100px;">
+                      <img
+                        src="assets/images/high-risk.jpg"
+                        alt=""
+                        style="height: 100px;"
+                      />
                     </div>
                   </div>
                 </div>
