@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { ApplicationComponent } from './retail-lender/application/application.component';
 
 const routes: Routes = [
   {
@@ -18,11 +19,17 @@ const routes: Routes = [
     loadChildren: () => import('./signup/signup.module').then(m=>m.SignupModule)
   },
   {
+    path: 'retail-lender',
+    component: ApplicationComponent
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',
     component: LoginComponent
-  } 
+  },
+
+   
 ];
 
 @NgModule({

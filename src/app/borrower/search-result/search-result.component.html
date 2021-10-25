@@ -3,9 +3,9 @@
     <div class="col-md-4"></div>
     <div class="col-md-8 p-4">
       <h2 class="text-center">
-       Search Result
+        Search Result
       </h2>
-      <br>
+      <br />
       <table class="table table-bordered">
         <tr>
           <th>Lender name</th>
@@ -16,12 +16,123 @@
         </tr>
         <tr>
           <td>Annapurna Microfinance</td>
-          <td>XY Sarani, YZ Nagar, <br>ABCD - XXXXXX</td>
-          <td><button class="btn btn-sm btn-success">View Map</button></td>
-          <td><button class="btn btn-sm">Suswastho Scheme</button></td>
-          <td><a href="borrower/success" class="btn btn-sm btn-primary">Apply</a></td>
+          <td>
+            XY Sarani, YZ Nagar,
+            <br />
+            ABCD - XXXXXX
+          </td>
+          <td>
+            <button
+              class="btn btn-sm btn-success"
+              data-toggle="modal"
+              data-target="#mapModal"
+            >
+              View Map
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-sm"
+              data-toggle="modal"
+              data-target="#schemeModal"
+            >
+              Suswastho Scheme
+            </button>
+          </td>
+          <td>
+            <a href="borrower/success" class="btn btn-sm btn-primary">Apply</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Retail Lender</td>
+          <td>
+           Address
+          </td>
+          <td>
+            <button
+              class="btn btn-sm btn-success"
+              data-toggle="modal"
+              data-target="#mapModal"
+            >
+              View Map
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-sm"
+              data-toggle="modal"
+              data-target="#schemeModal"
+            >
+              Lender Scheme
+            </button>
+          </td>
+          <td>
+            <a href="borrower/success" class="btn btn-sm btn-primary">Apply</a>
+          </td>
         </tr>
       </table>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="mapModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mapModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4>Viewing Map</h4>
+        <img
+          src="assets/images/map/Borrower1_MFI1.jpg"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="schemeModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="schemeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Suswastho Scheme</h4>
+      </div>
+      <div class="modal-body">
+        <p>Max Loan Amount: 10000</p>
+        <p>Max Tenure: 5 years</p>
+        <p>Interent rate: 10%</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
     </div>
   </div>
 </div>
