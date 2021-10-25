@@ -1,1 +1,239 @@
-lender
+<nav class="navbar navbar-expand-md">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="loansearch.html">
+        <span style="font-size: 1.5em;">UMMEED</span>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../lender/homepage.html">Lender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br />
+  <br />
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-md-2 h-100 bg-white">
+        <h4 class="mt-4 text-center">Menu</h4>
+        <br />
+        <a class="d-block p-3" href="./lender">Dashboard</a>
+        <a class="d-block p-3" href="./lender/new-applications">New Applications</a>
+        <a class="d-block p-3" href="./lender/ongoing">Ongoing loans</a>
+        <a class="d-block p-3" href="./lender/social-rating">Social Rating</a>
+        <a class="d-block p-3" href="./lender/schemes">My Schemes</a>
+        <a class="d-block p-3" href="./lender/reports">Reports</a>
+        </div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-text">
+                  <h4 class="text-center text-primary">New Applications</h4>
+                  <hr />
+                  <h1 class="text-center">356</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-text">
+                  <h4 class="text-center text-primary">Active Loans</h4>
+                  <hr />
+                  <h1 class="text-center">452</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <div class="card-text">
+                  <h4 class="text-center text-primary">Missed Payments</h4>
+                  <hr />
+                  <h1 class="text-center">850</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div id="chart" style="height: 400px;"></div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div id="chart2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    Highcharts.chart('chart', {
+      title: {
+        text: 'New Applications',
+      },
+
+      subtitle: {
+        text: 'Source: thesolarfoundation.com',
+      },
+
+      yAxis: {
+        title: {
+          text: 'Number of Employees',
+        },
+      },
+
+      xAxis: {
+        accessibility: {
+          rangeDescription: 'Range: 2010 to 2017',
+        },
+      },
+
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+      },
+
+      plotOptions: {
+        series: {
+          label: {
+            connectorAllowed: false,
+          },
+          pointStart: 2010,
+        },
+      },
+
+      series: [
+        {
+          name: 'Installation',
+          data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175],
+        },
+        {
+          name: 'Manufacturing',
+          data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434],
+        },
+        {
+          name: 'Sales & Distribution',
+          data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387],
+        },
+        {
+          name: 'Project Development',
+          data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227],
+        },
+        {
+          name: 'Other',
+          data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111],
+        },
+      ],
+
+      responsive: {
+        rules: [
+          {
+            condition: {
+              maxWidth: 500,
+            },
+            chartOptions: {
+              legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom',
+              },
+            },
+          },
+        ],
+      },
+    })
+
+    Highcharts.chart('chart2', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie',
+      },
+      title: {
+        text: 'Loans by status',
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+      },
+      accessibility: {
+        point: {
+          valueSuffix: '%',
+        },
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+          },
+        },
+      },
+      series: [
+        {
+          name: 'Brands',
+          colorByPoint: true,
+          data: [
+            {
+              name: 'Chrome',
+              y: 61.41,
+              sliced: true,
+              selected: true,
+            },
+            {
+              name: 'Internet Explorer',
+              y: 11.84,
+            },
+            {
+              name: 'Firefox',
+              y: 10.85,
+            },
+            {
+              name: 'Edge',
+              y: 4.67,
+            },
+            {
+              name: 'Safari',
+              y: 4.18,
+            },
+            {
+              name: 'Sogou Explorer',
+              y: 1.64,
+            },
+            {
+              name: 'Opera',
+              y: 1.6,
+            },
+            {
+              name: 'QQ',
+              y: 1.2,
+            },
+            {
+              name: 'Other',
+              y: 2.61,
+            },
+          ],
+        },
+      ],
+    })
+  </script>
