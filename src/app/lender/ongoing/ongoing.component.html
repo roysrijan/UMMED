@@ -1,220 +1,103 @@
-<nav class="navbar navbar-expand-md">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="loansearch.html">
-      <span style="font-size: 1.5em;">UMMEED</span>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Library</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<br />
-<br />
 <div class="container-fluid h-100">
   <div class="row h-100">
-    <div class="col-md-2 h-100 bg-white">
-      <h4 class="mt-4 text-center">Menu</h4>
-      <br />
-      <a class="d-block p-3" href="./lender">Dashboard</a>
-      <a class="d-block p-3" href="./lender/new-applications">New Applications</a>
-      <a class="d-block p-3" href="./lender/ongoing">Ongoing loans</a>
-      <a class="d-block p-3" href="./lender/social-rating">Social Rating</a>
-      <a class="d-block p-3" href="./lender/schemes">My Schemes</a>
-      <a class="d-block p-3" href="./lender/reports">Reports</a>
-    </div>
-    <div class="col-md-10">
-      <div class="card">
+    <div class="col-md-2 h-100">
+      <div class="card h-100" style="background-color: rgba(245, 245, 245, .75);">
         <div class="card-body">
-          <div class="card-text">
-            <h4 class="text-primary">Ongoing Loans</h4>
+          <h4 class="mt-4 text-center">Menu</h4>
+          <br />
+          <a class="d-block p-3" href="./lender/new-applications">
+            New Applications
+          </a>
+          <a class="d-block p-3" href="./lender/ongoing">Ongoing loans</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 h-100" >
+      <div class="card h-100" style="background-color: rgba(245, 245, 245, .75);">
+        <div class="card-body">
+          <div class="p-2">
+            <h4 class="p-2">Ongoing Loans</h4>
             <br>
-            <table class="table table-striped">
+            <table class="table table-bordered">
               <tr>
+                <th>Application No</th>
                 <th>Name</th>
-                <th>Address</th>
-                <th>Amount</th>
-                <th>EMI Tenure</th>
-                <th>Paid</th>
-                <th>Default</th>
+                <th>Loan Amount</th>
                 <th>Action</th>
               </tr>
               <tr>
+                <td>1002202</td>
                 <td>Amit Karmakar</td>
-                <td>Address</td>
                 <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn-sm mr-2 btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
                     View
                   </button>
-                 
                 </td>
               </tr>
               <tr>
+                <td>1002202</td>
                 <td>Ashok Subramanian</td>
-                <td>Address</td>
                 <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn-sm mr-2 btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
                     View
                   </button>
-                 
                 </td>
               </tr>
               <tr>
+                <td>1002202</td>
                 <td>Dwipanita Maity</td>
-                <td>Address</td>
                 <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn-sm mr-2 btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
                     View
                   </button>
-                 
                 </td>
               </tr>
               <tr>
+                <td>1002202</td>
                 <td>Krishanu Khan</td>
-                <td>Address</td>
                 <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn-sm mr-2 btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
                     View
                   </button>
-                 
                 </td>
               </tr>
               <tr>
-                <td>Suvadip Banerjee</td>
-                <td>Address</td>
+                <td>1002202</td>
+                <td>Joydeep Guha</td>
                 <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
                 <td>
                   <button
-                    class="btn btn-primary"
+                    class="btn btn-sm mr-2 btn-primary"
                     data-toggle="modal"
                     data-target="#exampleModal"
                   >
                     View
                   </button>
-                 
-                </td>
-              </tr>
-              <tr>
-                <td>Amit Karmakar</td>
-                <td>Address</td>
-                <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    View
-                  </button>
-                 
-                </td>
-              </tr>
-              <tr>
-                <td>Ashok Subramanian</td>
-                <td>Address</td>
-                <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    View
-                  </button>
-                 
-                </td>
-              </tr>
-              <tr>
-                <td>Amit Karmakar</td>
-                <td>Address</td>
-                <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    View
-                  </button>
-                 
-                </td>
-              </tr>
-              <tr>
-                <td>Ashok Subramanian</td>
-                <td>Address</td>
-                <td>10000</td>
-                <td>60</td>
-                <td>25</td>
-                <td>0</td>
-                <td>
-                  <button
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    View
-                  </button>
-                 
                 </td>
               </tr>
             </table>
           </div>
+
           <div
             class="modal fade"
             id="exampleModal"
@@ -239,30 +122,55 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Name: </p>
+                  <div class="row">
+                    <div class="col">
+                      <p>Name:</p>
+                    </div>
+                    <div class="col">
+                      <p>Amount:</p>
+                    </div>
+                  </div>
+
                   <p>Address:</p>
-                  <p>Amount:</p>
-                  <p>Borrower id:</p>
-                  <p>Borrower Type:</p>
-                  <p>Govt id:</p>
-                  <p>Ph no:</p>
-                  <p>DoB:</p>
-                  <p>Gender:</p>
+                  <div class="row">
+                    <div class="col">
+                      <p>Ph no:</p>
+                    </div>
+                    <div class="col">
+                      <p>Govt id:</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p>DoB:</p>
+                    </div>
+                    <div class="col">
+                      <p>Gender:</p>
+                    </div>
+                  </div>
                   <p>SHG Affiliation:</p>
                   <p>Affiliated SHG Name:</p>
-                  <p>PUB add:</p>
-                  <p><b>OVERALL SOCIAL RATING:</b></p>
+                  <hr />
+                  <div class="row">
+                    <div class="col">
+                      <p style="line-height: 100px">Social Rating</p>
+                    </div>
+                    <div class="col text-right">
+                      <img
+                        src="assets/images/high-risk.jpg"
+                        alt=""
+                        style="height: 100px;"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    class="btn btn-secondary btn-sm"
                     data-dismiss="modal"
                   >
                     Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
                   </button>
                 </div>
               </div>

@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
 html,
 body {
   height: 100%;
   width: 100%;
+}
+
+h1,h2,h3,h4,th, label{
+  font-family: Ubuntu;
 }
 
 body {
@@ -24,4 +28,20 @@ body {
 
 .menu{
   background-color: white;
+}
+
+.header-link{
+  text-decoration: none;
+  color: white;
+  font-family: Ubuntu;
+}
+
+.header-link:hover{
+  text-decoration: none;
+  color: 333;
+  font-family: Ubuntu;
+}
+
+.bordered{
+  border: 1px solid #777
 }

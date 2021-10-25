@@ -8,10 +8,12 @@ import { BorrowerComponent } from './borrower.component';
 import { LoanSearchComponent } from './loan-search/loan-search.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { SuccessComponent } from './success/success.component';
+import { LoanSearchRegionalComponent } from './loan-search-regional/loan-search-regional.component';
 
 const routes: Routes = [
     {path:'apply-loan', component: ApplyLoanComponent},
     {path:'loan-search', component: LoanSearchComponent},
+    {path:'loan-search-regional', component: LoanSearchRegionalComponent},
     {path:'search-result', component: SearchResultComponent},
     {path:'success',component: SuccessComponent},
     {path:'', component:BorrowerComponent}
@@ -20,6 +22,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     BorrowerComponent,
+    LoanSearchRegionalComponent,
   ],
   imports: [
     RouterModule.forChild(routes),

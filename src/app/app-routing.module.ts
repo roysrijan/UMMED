@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { ApplicationComponent } from './retail-lender/application/application.component';
+import { SuccessMessageComponent } from './success-message/success-message.component';
 
 const routes: Routes = [
   {
@@ -18,11 +20,21 @@ const routes: Routes = [
     loadChildren: () => import('./signup/signup.module').then(m=>m.SignupModule)
   },
   {
+    path: 'retail-lender',
+    component: ApplicationComponent
+  },
+  {
+    path: 'success-message',
+    component: SuccessMessageComponent
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',
     component: LoginComponent
-  } 
+  },
+
+   
 ];
 
 @NgModule({
