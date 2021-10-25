@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SidemenuComponent } from '../sidemenu/sidemenu.component';
 
 @Component({
   selector: 'new-applications',
