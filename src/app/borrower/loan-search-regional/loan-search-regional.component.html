@@ -1,0 +1,153 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 p-4">
+            <h4 class="text-center">ঋণ অনুসন্ধান করুন</h4>
+            <br />
+            <div class="border p-4">
+                <form class="" method="get" action="/borrower/search-result">
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="">আপনার কত টাকা ঋণ দরকার ?</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="">কি উদ্দেশ্যে ঋণ প্রয়োজন ?</label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="role">
+                                <option value="Borrower">চিকিৎসা</option>
+                                <option value="MF Credit Provider">ব্যবসা</option>
+                                <option value="Retail Lender">পড়াশোনা</option>
+                                <option value="Retail Lender">অন্যান্য</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="">
+                                আপনার মাসিক আয় কত ?
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="income">
+                                <option value="5000">৫০০০ এর কম </option>
+                                <option value="5000-10000">৫০০০ - ১০০০০</option>
+                                <option value="5000-10000">১০০০০ - ১৫০০০</option>
+                                <option value="5000-10000">১৫০০০ এর বেশি</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="">
+                                কত মাসের জন্য ঋণ দরকার ?
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="income">
+                                <option value="6">৬ মাস</option>
+                                <option value="12">১২ মাস</option>
+                                <option value="24">২৪ মাস</option>
+                                <option value="36">৩৬ মাস</option>
+                                <option value="48">৪৮ মাস</option>
+                                <option value="60">৬০ মাস</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label for="">
+                                আপনি কি কোনো স্বনির্ভর গোষ্ঠীর সাথে যুক্ত ?
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <select class="form-control" id="income">
+                                <option selected>না</option>
+                                <option value="Annapurna SHG">অন্নপূর্ণা স্বনির্ভর গোষ্ঠী </option>
+                                <option value="Matribhoomi SHG">মাতৃভূমি স্বনির্ভর গোষ্ঠী</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-success" type="submit">
+                            ঋণ অনুসন্ধান করুন
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <h4 class="text-center">আমার সক্রিয় ঋণ</h4>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>লোন নম্বর</th>
+                    <th>ঋণদাতা</th>
+                    <th>ঋনের ধরণ</th>
+                    <th>পরিমান</th>
+                    <th>ই এম আই</th>
+                    <th>মেয়াদ</th>
+                    <th>পরিশোধিত ই এম আই </th>
+                    <th>বাকি ই এম আই </th>
+                    <th>ই এম আই পরিশোধ করুন</th>
+                </tr>
+                <tr>
+                    <td>১১২২২১১</td>
+                    <td>অন্নপূর্ণা স্বনির্ভর গোষ্ঠী </td>
+                    <td>এম এফ আই</td>
+                    <td>১০০০০</td>
+                    <td>১১২২</td>
+                    <td>১০</td>
+                    <td>৫</td>
+                    <td>৫</td>
+                    <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">ই এম আই পরিশোধ করুন</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>১১২২২১১</td>
+                    <td>নবযুগ রিটেল লেন্ডার </td>
+                    <td>রিটেল লেন্ডার</td>
+                    <td>১০০০০</td>
+                    <td>১১২২</td>
+                    <td>১০</td>
+                    <td>৫</td>
+                    <td>৫</td>
+                    <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">ই এম আই পরিশোধ করুন</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+<div class="modal fade" id="emiModal" tabindex="-1" role="dialog" aria-labelledby="emiModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Pay EMI</h4>
+            </div>
+            <div class="modal-body">
+                <p>আপনি অন্নপূর্ণা স্বনির্ভর গোষ্ঠী র ঋণের ই এম আই  - ১১২২ টাকা পরিশোধ করতে চলেছেন</p>
+                <p>আপনাকে পেমেন্ট গেটওয়ের ওয়েবসাইট এ নিয়ে যাওয়া হবে যদি আপনি নিচের বাটন এ ক্লিক করেন </p>
+                <a href="success-message" class="btn btn-success">সুরক্ষিত ভাবে  ই এম আই পরিশোধ করুন</a>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
