@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: () => import('./lender/lender.module').then(m=>m.LenderModule)
   },
   {
+    path:'signup',
+    loadChildren: () => import('./signup/signup.module').then(m=>m.SignupModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full',
