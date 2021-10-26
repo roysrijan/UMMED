@@ -26,5 +26,24 @@ export class NewApplicationsrComponent {
 
   setData(data:any) {
     this.viewData = data;
-  } 
+  }
+  
+  getSocialScore() {
+    let num = Math.floor(Math.random() * 4) + 1;
+    return "assets/images/" + num + ".PNG";
+  }
+
+  onApprove(data:any) {
+    this.http.post("http://127.0.0.1:3000/api/loan/process", {app_id:data.APP_ID, status:'Approved'}).subscribe(o => {
+      this.title = 'success';
+    });
+    
+  }
+
+  onRejected(data:any) {
+    this.http.post("http://127.0.0.1:3000/api/loan/process", {app_id:data.APP_ID, status:'Rejected'}).subscribe(o => {
+      this.title = 'rejected';
+    });
+    
+  }
 }

@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div *ngIf="title != 'success' && title != 'rejected'" class="container-fluid">
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-8 p-4">
@@ -26,12 +26,13 @@
               View
             </button>
             <a
-              href="approve-application.html"
+              href="javascript:;"
               class="btn btn-success btn-sm mr-2"
+              (click)="onApprove(data)"
             >
               Approve
             </a>
-            <a href="reject-application.html" class="btn btn-danger btn-sm">
+            <a (click)="onRejected(data)" class="btn btn-danger btn-sm">
               Reject
             </a>
           </td>
@@ -46,7 +47,7 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div *ngIf="viewData" class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
@@ -102,7 +103,7 @@
               </div>
               <div class="col text-right">
                 <img
-                  src="assets/images/high-risk.jpg"
+                  [src]="getSocialScore()"
                   alt=""
                   style="height: 100px;"
                 />
@@ -123,3 +124,8 @@
     </div>
   </div>
 </div>
+
+<success *ngIf="title == 'success'" [message]="'Successfully Approved'" [optmsg]="''"></success>
+
+<success *ngIf="title == 'rejected'" [message]="'Rejected'" [optmsg]="''"></success>
+
