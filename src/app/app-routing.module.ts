@@ -22,7 +22,7 @@ const routes: Routes = [
     loadChildren: () => import('./signup/signup.module').then(m=>m.SignupModule)
   },
   {
-    path: 'retail-lender',
+    path: 'mfi-lender',
     component: ApplicationComponent
   },
   {

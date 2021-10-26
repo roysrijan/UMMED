@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ApplicationComponent } from './retail-lender/application/application.component';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { FinanceAwarenessComponent } from './finance-awareness/finance-awareness.component';
+import { SuccessComponent } from './retail-lender/success/success.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,12 +18,14 @@ import { FinanceAwarenessComponent } from './finance-awareness/finance-awareness
     HeaderComponent,
     ApplicationComponent,
     SuccessMessageComponent,
-    FinanceAwarenessComponent
+    FinanceAwarenessComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
