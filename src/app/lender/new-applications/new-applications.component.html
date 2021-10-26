@@ -4,6 +4,7 @@
     <div class="col-md-8 p-4">
       <h4 class="text-center">New Applications</h4>
       <br />
+
       <table class="table table-bordered">
         <tr>
           <th>Application No</th>
@@ -11,107 +12,16 @@
           <th>Loan Amount</th>
           <th>Action</th>
         </tr>
-        <tr>
-          <td>1002202</td>
-          <td>Amit Karmakar</td>
-          <td>10000</td>
+        <tr *ngFor="let data of dataSource">
+          <td>{{data.APP_ID}}</td>
+          <td>{{data.BORROWER_NAME}}</td>
+          <td>{{data.AMOUNT}}</td>
           <td>
             <button
               class="btn btn-sm mr-2 btn-primary"
               data-toggle="modal"
               data-target="#exampleModal"
-            >
-              View
-            </button>
-            <a
-              href="approve-application.html"
-              class="btn btn-success btn-sm mr-2"
-            >
-              Approve
-            </a>
-            <a href="reject-application.html" class="btn btn-danger btn-sm">
-              Reject
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>1002202</td>
-          <td>Ashok Subramanian</td>
-          <td>10000</td>
-          <td>
-            <button
-              class="btn btn-sm mr-2 btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-              View
-            </button>
-            <a
-              href="approve-application.html"
-              class="btn btn-success btn-sm mr-2"
-            >
-              Approve
-            </a>
-            <a href="reject-application.html" class="btn btn-danger btn-sm">
-              Reject
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>1002202</td>
-          <td>Dwipanita Maity</td>
-          <td>10000</td>
-          <td>
-            <button
-              class="btn btn-sm mr-2 btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-              View
-            </button>
-            <a
-              href="approve-application.html"
-              class="btn btn-success btn-sm mr-2"
-            >
-              Approve
-            </a>
-            <a href="reject-application.html" class="btn btn-danger btn-sm">
-              Reject
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>1002202</td>
-          <td>Krishanu Khan</td>
-          <td>10000</td>
-          <td>
-            <button
-              class="btn btn-sm mr-2 btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-              View
-            </button>
-            <a
-              href="approve-application.html"
-              class="btn btn-success btn-sm mr-2"
-            >
-              Approve
-            </a>
-            <a href="reject-application.html" class="btn btn-danger btn-sm">
-              Reject
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>1002202</td>
-          <td>Joydeep Guha</td>
-          <td>10000</td>
-          <td>
-            <button
-              class="btn btn-sm mr-2 btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
+              (click)="setData(data)"
             >
               View
             </button>
@@ -153,36 +63,36 @@
           </div>
           <div class="modal-body">
             <div class="row">
-              <div class="col">
-                <p>Name:</p>
+              <div class="col" >
+                <p >Name: {{viewData.BORROWER_NAME}}</p>
               </div>
               <div class="col">
-                <p>Amount:</p>
-              </div>
-            </div>
-            <p>Address:</p>
-            <div class="row">
-              <div class="col">
-                <p>Ph no:</p>
-              </div>
-              <div class="col">
-                <p>Govt id:</p>
+                <p>Amount: {{viewData.AMOUNT}}</p>
               </div>
             </div>
+            <p>Address: {{viewData.ADDRESS}}</p>
             <div class="row">
               <div class="col">
-                <p>DoB:</p>
+                <p>Ph no: {{viewData.PHONE_NUMBER}}</p>
               </div>
               <div class="col">
-                <p>Gender:</p>
+                <p>Govt id: {{viewData.GOVT_ID}}</p>
               </div>
             </div>
             <div class="row">
               <div class="col">
-                <p>SHG Affiliation:</p>
+                <p>DoB: {{viewData.DATE_OF_BIRTH}}</p>
               </div>
               <div class="col">
-                <p>Affiliated SHG Name:</p>
+                <p>Gender: {{viewData.GENDER }}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p>SHG Affiliation: {{viewData.SHG_AFFILIATION}}</p>
+              </div>
+              <div class="col">
+                <p>Affiliated SHG Name: {{viewData.AFFILIATED_SHG_NAME}}</p>
               </div>
             </div>
             <hr />

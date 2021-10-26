@@ -20,7 +20,7 @@ export class LoginComponent {
   });   
   }  
   login(){
-    sessionStorage.setItem('user', this.form.value);
+    sessionStorage.setItem('user', JSON.stringify(this.form.value));
     if(this.form.value.role=='Admin'){
       this.router.navigate(['/signup']);
     }
