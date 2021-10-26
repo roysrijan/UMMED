@@ -11,6 +11,7 @@ import { SchemesComponent } from './schemes/schemes.component';
 import { SocailRatingComponent } from './social-rating/social-rating.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
     {path:'new-applications', component:NewApplicationsrComponent},
@@ -25,7 +26,8 @@ const routes: Routes = [
   declarations: [
     LenderComponent,
     SidemenuComponent,
-    NewApplicationsrComponent
+    NewApplicationsrComponent,
+    SuccessComponent
   ],
   imports: [
     RouterModule.forChild(routes),
