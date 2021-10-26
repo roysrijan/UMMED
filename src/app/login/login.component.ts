@@ -11,7 +11,10 @@ export class LoginComponent {
   title = 'ummed'
   role = 'Borrower'
   form: FormGroup = new FormGroup({})
-  constructor(private router: Router, private fb: FormBuilder) {}
+  constructor(private router: Router, private fb: FormBuilder) {
+    sessionStorage.clear();
+
+  }
   ngOnInit() {
     this.form = this.fb.group({
       user_id: new FormControl(),
