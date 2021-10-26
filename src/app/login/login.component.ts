@@ -29,9 +29,9 @@ export class LoginComponent {
     } else if (this.form.value.role == 'Borrower') {
       window.location.href='/borrower/loan-search';
     } else if (this.form.value.role == 'Retail Lender') {
-      window.location.href='/retail-lender';
-    } else {
       window.location.href='/lender/new-applications';
+    } else {
+      window.location.href='/mfi-lender';
     }
   }
 }

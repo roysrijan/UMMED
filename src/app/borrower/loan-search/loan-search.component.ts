@@ -24,4 +24,8 @@ export class LoanSearchComponent {
       relativeTo: this.route,
     })
   }
+
+  setLoanAmount(event:any) {
+    sessionStorage.setItem('amount', event.target.value);
+  }
 }

@@ -30,7 +30,7 @@ export class SearchResultComponent {
     var elem: any = {
       'borrower_id':JSON.parse(JSON.parse(JSON.stringify(sessionStorage.getItem('user')))).user_id,
       'lender_id': value.OFFERING_OWNER_ID,
-      'cap_amount': value.CAP_AMOUNT,
+      'cap_amount': sessionStorage.getItem('amount') ? sessionStorage.getItem('amount') : value.CAP_AMOUNT,
       'int_rate': value.INTEREST_RATE,
       'purpose': value.OFFERING_TYPE
     };
