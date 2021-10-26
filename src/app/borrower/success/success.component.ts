@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'success',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class SuccessComponent {
   title = 'ummed';
+  @Input() message: string = '';
+  @Input() optmsg: string = '';
 }
