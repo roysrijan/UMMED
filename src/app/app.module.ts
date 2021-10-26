@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ApplicationComponent } from './retail-lender/application/application.component';
 import { SuccessMessageComponent } from './success-message/success-message.component';
+import { FinanceAwarenessComponent } from './finance-awareness/finance-awareness.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
     AppComponent,
     HeaderComponent,
     ApplicationComponent,
-    SuccessMessageComponent
+    SuccessMessageComponent,
+    FinanceAwarenessComponent
   ],
   imports: [
     BrowserModule,
