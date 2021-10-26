@@ -9,9 +9,11 @@
       <a class="header-link ml-3" href="borrower/active-loans">My Active Loans</a>
       <a class="header-link ml-3" href="/">Login</a>
       <a class="header-link ml-3" href="/logout">Logout</a>
-      <a *ngIf="!regionalLanguage" (click)="onRegionalLanguageClick('Bengali')" class="btn btn-sm btn-warning ml-3">বাংলা</a>
-      <a *ngIf="regionalLangvuage" (click)="onRegionalLanguageClick('English')" class="btn btn-sm btn-warning ml-3">English</a>
-    </div> 
+      <a *ngIf="!regionalLanguage" (click)="onRegionalLanguageClick('Bengali')"
+        class="btn btn-sm btn-warning ml-3">বাংলা</a>
+      <a *ngIf="regionalLanguage" (click)="onRegionalLanguageClick('English')"
+        class="btn btn-sm btn-warning ml-3">English</a>
+    </div>
   </div>
   <br>
 </div>
