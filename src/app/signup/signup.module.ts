@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { SuccessComponent } from '../borrower/success/success.component';
 
 import { SignupComponent } from './signup.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     SignupComponent,
+    SuccessComponent
   ],
   imports: [
     RouterModule.forChild(routes),

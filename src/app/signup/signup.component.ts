@@ -28,6 +28,11 @@ export class SignupComponent implements OnInit {
     })
   }
   register(){
-    this.http.post('http://127.0.0.1:3000/api/borrower/borrower',{...this.form.value,affiliated_shg_name:'HSBCMFI' }, {headers: {'Content-Type': 'application/json'}}).subscribe()
+    this.http.post('http://127.0.0.1:3000/api/borrower/borrower',this.form.value, {headers: {'Content-Type': 'application/json'}}).subscribe(()=>{
+      this.title = 'success';
+    },
+    ()=>{
+      this.title = 'failure';
+    })
   }
 }
