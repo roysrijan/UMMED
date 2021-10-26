@@ -10,13 +10,14 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { SuccessComponent } from './success/success.component';
 import { LoanSearchRegionalComponent } from './loan-search-regional/loan-search-regional.component';
 import { ActiveLoansComponent } from './active-loans/active-loans.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
     {path:'apply-loan', component: ApplyLoanComponent},
     {path:'active-loans', component: ActiveLoansComponent},
     {path:'loan-search', component: LoanSearchComponent},
     {path:'loan-search-regional', component: LoanSearchRegionalComponent},
-    {path:'search-result', component: SearchResultComponent},
+    {path:'search-result/:id', component: SearchResultComponent},
     {path:'success',component: SuccessComponent},
     {path:'', component:BorrowerComponent}
 ]
@@ -26,10 +27,12 @@ const routes: Routes = [
     BorrowerComponent,
     LoanSearchRegionalComponent,
     ActiveLoansComponent,
+    SearchResultComponent
   ],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
 })

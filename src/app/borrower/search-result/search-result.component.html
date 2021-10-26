@@ -15,8 +15,8 @@
           <th>Scheme</th>
           <th>Apply</th>
         </tr>
-        <tr>
-          <td>Annapurna Microfinance</td>
+        <tr *ngFor="let element of mfi">
+          <td>{{element.OFFERING_NAME}}</td>
           <td>
             XY Sarani, YZ Nagar,
             <br />
@@ -36,12 +36,13 @@
               class="btn btn-sm"
               data-toggle="modal"
               data-target="#schemeModal"
+              (click)="setData(element)"
             >
               Suswastho Scheme
             </button>
           </td>
           <td>
-            <a href="success-message" class="btn btn-sm btn-primary">Apply</a>
+            <a href="javascript:;" class="btn btn-sm btn-primary" (click)="apply(element)">Apply</a>
           </td>
         </tr>
       </table>
@@ -58,19 +59,20 @@
           <th>Loan Details</th>
           <th>Apply</th>
         </tr>
-        <tr>
-          <td>Retail Lender</td>
+        <tr *ngFor="let element of retail">
+          <td>{{element.OFFERING_NAME}}</td>
           <td>
             <button
               class="btn btn-sm"
               data-toggle="modal"
               data-target="#schemeModal"
+              (click)="setData(element)"
             >
               Lender Scheme
             </button>
           </td>
           <td>
-            <a href="success-message" class="btn btn-sm btn-primary">Apply</a>
+            <a href="javascript:;" class="btn btn-sm btn-primary" (click)="apply(element)">Apply</a>
           </td>
         </tr>
       </table>
@@ -111,6 +113,7 @@
 </div>
 
 <div
+  *ngIf="data"
   class="modal fade"
   id="schemeModal"
   tabindex="-1"
@@ -124,9 +127,9 @@
         <h4>Suswastho Scheme</h4>
       </div>
       <div class="modal-body">
-        <p>Max Loan Amount: 10000</p>
+        <p>Max Loan Amount: {{data?.CAP_AMOUNT}}</p>
         <p>Max Tenure: 5 years</p>
-        <p>Interent rate: 10%</p>
+        <p>Interent rate: {{data.INTEREST_RATE}}%</p>
       </div>
       <div class="modal-footer">
         <button
