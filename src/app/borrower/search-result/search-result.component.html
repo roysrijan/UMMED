@@ -1,122 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <title>Welcome to UMEED</title>
-    <!-- Bootstrap core CSS -->
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-md fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand link-white" href="login.html">
-          <span style="font-size: 1.3em;">UMMEED</span>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link link-white active" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="lender/homepage.html">
-                Lender
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Library</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link-white" href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <br />
-    <br />
-    <br />
-    <h2 class="text-center">Search Results</h2>
-    <div class="container-fluid" style="height: 80%; overflow-y: scroll;">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8 p-4">
+      <h4 class="text-center">Search Result</h4>
       <br />
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-text">
-                <h4 class="text-success">New Age Microfinance</h4>
-                <hr />
-                <div class="row">
-                  <div class="col-md-6">
-                    <p><b class="mt-2 mb-1">Address</b></p>
-                    <p>
-                      5, ABCD Street
-                      <br />
-                      ABC City
-                      <br />
-                      PIN - 700000
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <p>Scheme Name: Agri Pro</p>
-                    <p>Interest Rate: 10%</p>
-                    <p>Max Tenure: 5 years</p>
-                  </div>
-                </div>
-                <hr />
-                <div class="text-right">
-                  <a href="/borrower/apply-loan" class="btn btn-primary">
-                    Apply for this loan
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3"></div>
+      <strong>MFI</strong>
+      <br>
+      <br>  
+      <table class="table table-bordered">
+        <tr>
+          <th>Lender name</th>
+          <th>Lender address</th>
+          <th>Location</th>
+          <th>Scheme</th>
+          <th>Apply</th>
+        </tr>
+        <tr *ngFor="let element of mfi">
+          <td>{{element.OFFERING_NAME}}</td>
+          <td>
+            XY Sarani, YZ Nagar,
+            <br />
+            ABCD - XXXXXX
+          </td>
+          <td>
+            <button
+              class="btn btn-sm btn-success"
+              data-toggle="modal"
+              data-target="#mapModal"
+            >
+              View Map
+            </button>
+          </td>
+          <td>
+            <button
+              class="btn btn-sm"
+              data-toggle="modal"
+              data-target="#schemeModal"
+              (click)="setData(element)"
+            >
+              Suswastho Scheme
+            </button>
+          </td>
+          <td>
+            <a href="javascript:;" class="btn btn-sm btn-primary" (click)="apply(element)">Apply</a>
+          </td>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+
+      <strong>Retail Lender</strong>
+      <br>
+      <br>
+      <table class="table table-bordered">
+        <tr>
+          <th>Lender name</th>
+          <th>Loan Details</th>
+          <th>Apply</th>
+        </tr>
+        <tr *ngFor="let element of retail">
+          <td>{{element.OFFERING_NAME}}</td>
+          <td>
+            <button
+              class="btn btn-sm"
+              data-toggle="modal"
+              data-target="#schemeModal"
+              (click)="setData(element)"
+            >
+              Lender Scheme
+            </button>
+          </td>
+          <td>
+            <a href="javascript:;" class="btn btn-sm btn-primary" (click)="apply(element)">Apply</a>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="mapModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mapModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h4>Viewing Map</h4>
+        <img
+          src="assets/images/map/Borrower1_MFI1.jpg"
+          alt=""
+          class="img-fluid"
+        />
       </div>
-      <div class="row mt-4">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-text">
-                <h4 class="text-success">Annapurna Microfinance</h4>
-                <hr />
-                <div class="row">
-                  <div class="col-md-6">
-                    <p><b class="mt-2 mb-1">Address</b></p>
-                    <p>
-                      5, ABCD Str
-                      <br />
-                      ABC City
-                      <br />
-                      PIN - 709899
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <p>Scheme Name: Agri Pro Plus</p>
-                    <p>Interest Rate: 20%</p>
-                    <p>Max Tenure: 3 years</p>
-                  </div>
-                </div>
-                <hr />
-                <div class="text-right">
-                  <a href="/borrower/apply-loan" class="btn btn-primary">
-                    Apply for this loan
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3"></div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
+
+<div
+  *ngIf="data"
+  class="modal fade"
+  id="schemeModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="schemeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Suswastho Scheme</h4>
+      </div>
+      <div class="modal-body">
+        <p>Max Loan Amount: {{data?.CAP_AMOUNT}}</p>
+        <p>Max Tenure: 5 years</p>
+        <p>Interent rate: {{data.INTEREST_RATE}}%</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
