@@ -37,7 +37,11 @@ export class ApplicationComponent implements OnInit {
   }
 
   onApprove(data:any) {
-    this.http.post("http://127.0.0.1:3000/api/loan/process", {app_id:data.APP_ID, status:'Approved'}).subscribe(o => {
+    this.http.post("http://127.0.0.1:3000/api/loan/process", {
+      app_id:data.APP_ID, 
+      status:'Approved',
+      lender_type :JSON.parse(JSON.parse(JSON.stringify(sessionStorage.getItem('user')))).role
+    }).subscribe(o => {
       this.title = 'success';
     });
     
