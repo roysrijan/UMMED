@@ -27,6 +27,7 @@
               class="btn btn-sm btn-success"
               data-toggle="modal"
               data-target="#mapModal"
+              (click)="setMap()"
             >
               View Map
             </button>
@@ -94,7 +95,7 @@
       <div class="modal-body">
         <h4>Viewing Map</h4>
         <img
-          src="assets/images/map/Borrower1_MFI1.jpg"
+          [src]="getMap()"
           alt=""
           class="img-fluid"
         />

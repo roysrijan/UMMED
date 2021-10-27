@@ -16,28 +16,16 @@
                     <th>EMI remaining</th>
                     <th>Pay EMI</th>
                 </tr>
-                <tr>
-                    <td>105652</td>
-                    <td>Annapurna MF</td>
-                    <td>MFI</td>
-                    <td>10000</td>
-                    <td>1122</td>
+                <tr *ngFor="let element of data">
+                    <td>{{element.LOAN_ID}}</td>
+                    <td>{{element.Lender_Name}}</td>
+                    <td>{{element.LOAN_AMOUNT}}</td>
+                    <td>{{element.EMI_AMOUNT}}</td>
+                    <td>{{element.EMI_AMOUNT}}</td>
                     <td>10</td>
-                    <td>5</td>
-                    <td>5</td>
-                    <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">Pay EMI</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>102596</td>
-                    <td>Rakesh Jhalwallah</td>
-                    <td>Retail Lender</td>
-                    <td>10500</td>
-                    <td>194</td>
-                    <td>11</td>
-                    <td>0</td>
-                    <td>60</td>
-                    <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary">Pay EMI</button>
+                    <td>{{element.EMI_PAID}}</td>
+                    <td>{{element.EMI_TO_BE_PAID}}</td>
+                    <td><button data-toggle="modal" data-target="#emiModal" class="btn btn-primary" (click)="payEMI(element.LOAN_ID)">Pay EMI</button>
                     </td>
                 </tr>
             </table>

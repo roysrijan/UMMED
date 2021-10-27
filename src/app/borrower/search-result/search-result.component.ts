@@ -12,6 +12,7 @@ export class SearchResultComponent {
   mfi: any=[];
   retail: any = [];
   data: any = {};
+  map: string = "assets/images/map/" + 1 + ".jpg";
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {}
   ngOnInit() {
     this.route.params.subscribe(({id})=>{
@@ -37,5 +38,14 @@ export class SearchResultComponent {
     this.http.post('http://127.0.0.1:3000/api/loan/apply', elem).subscribe(()=>{
       this.router.navigate(['/success-message']);
     });
+  }
+
+  setMap() {
+    let num = Math.floor(Math.random() * 4) + 1;
+    this.map = "assets/images/map/" + num + ".jpg";
+  }
+
+  getMap(){
+    return this.map;
   }
 }
