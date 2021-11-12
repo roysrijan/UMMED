@@ -7,6 +7,7 @@ import { FinanceAwarenessComponent } from './finance-awareness/finance-awareness
 import { AdminComponent } from './lender/admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { ApplicationComponent } from './retail-lender/application/application.component';
+import { BuySecurityComponent } from './retail-lender/buy-security/buy-security.component';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'mfi-admin',
     component: AdminComponent
+  },
+  {
+    path: 'buy-security',
+    component: BuySecurityComponent
   },
   {
     path: '',
