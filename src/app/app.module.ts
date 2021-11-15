@@ -10,6 +10,7 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
 import { FinanceAwarenessComponent } from './finance-awareness/finance-awareness.component';
 import { SuccessComponent } from './retail-lender/success/success.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BuySecurityComponent } from './retail-lender/buy-security/buy-security.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     ApplicationComponent,
     SuccessMessageComponent,
     FinanceAwarenessComponent,
-    SuccessComponent
+    SuccessComponent,
+    BuySecurityComponent
   ],
   imports: [
     BrowserModule,

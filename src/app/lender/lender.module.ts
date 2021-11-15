@@ -12,6 +12,7 @@ import { SocailRatingComponent } from './social-rating/social-rating.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SuccessComponent } from './success/success.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
     {path:'new-applications', component:NewApplicationsrComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path:'social-rating', component:SocailRatingComponent},
     {path:'schemes', component:SchemesComponent},
     {path:'reports', component:ReportsComponent},
+    {path:'admin', component:AdminComponent},
     {path:'', component:LenderComponent}
 ]
 
@@ -27,7 +29,8 @@ const routes: Routes = [
     LenderComponent,
     SidemenuComponent,
     NewApplicationsrComponent,
-    SuccessComponent
+    SuccessComponent,
+    AdminComponent
   ],
   imports: [
     RouterModule.forChild(routes),
