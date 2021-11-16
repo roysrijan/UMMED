@@ -33,7 +33,7 @@ export class LoginComponent {
     } else if (this.form.value.role == 'Retail Lender') {
       window.location.href='/lender/new-applications';
     } else {
-      window.location.href='/buy-security';
+      window.location.href='/mfi-lender';
     }
   }
 }

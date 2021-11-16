@@ -9,11 +9,13 @@
       <a class="header-link ml-3" href="borrower/active-loans" *ngIf="borrowerLoggedIn">My Active Loans</a>
       <a class="header-link ml-3" href="awareness"  *ngIf="borrowerLoggedIn">Financial Awareness</a>
       <a class="header-link ml-3" href="/" *ngIf="!loggedIn">Login</a>
-      <a class="header-link ml-3" (click)="logout()" href="#" *ngIf="loggedIn">Logout</a>
       <a *ngIf="!regionalLanguage && borrowerLoggedIn" (click)="onRegionalLanguageClick('Bengali')"
         class="btn btn-sm btn-warning ml-3">বাংলা</a>
       <a *ngIf="regionalLanguage && borrowerLoggedIn" (click)="onRegionalLanguageClick('English')"
         class="btn btn-sm btn-warning ml-3">English</a>
+      <a class="header-link ml-3" href="buy-security" *ngIf="lenderLoggedIn">Buy Security</a>
+      <a class="header-link ml-3" href="lender/new-applications"  *ngIf="lenderLoggedIn">New Applications</a>
+      <a class="header-link ml-3" (click)="logout()" href="#" *ngIf="loggedIn">Logout</a>
     </div>
   </div>
   <br>

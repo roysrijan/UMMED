@@ -9,6 +9,7 @@ import { Router } from '@angular/router'
 export class HeaderComponent implements OnInit {
   borrowerLoggedIn = false
   loggedIn = false
+  lenderLoggedIn = false
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -19,6 +20,9 @@ export class HeaderComponent implements OnInit {
       this.loggedIn = true;
       if (user.role == 'Borrower') {
         this.borrowerLoggedIn = true
+      }
+      else if(user.role == 'Retail Lender') {
+        this.lenderLoggedIn = true
       }
     }
   }
