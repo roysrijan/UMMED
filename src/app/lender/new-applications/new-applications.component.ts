@@ -30,6 +30,7 @@ export class NewApplicationsrComponent {
   
   getSocialScore() {
     let num = Math.floor(Math.random() * 4) + 1;
+    if(num==1) num = 2;
     return "assets/images/" + num + ".PNG";
   }
 

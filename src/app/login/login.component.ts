@@ -26,12 +26,14 @@ export class LoginComponent {
     sessionStorage.setItem('user', JSON.stringify(this.form.value))
     if (this.form.value.role == 'Admin') {
       window.location.href='/signup';
+    } else if (this.form.value.role == 'MFI Admin') {
+      window.location.href='/mfi-admin';
     } else if (this.form.value.role == 'Borrower') {
       window.location.href='/borrower/loan-search';
     } else if (this.form.value.role == 'Retail Lender') {
       window.location.href='/lender/new-applications';
     } else {
-      window.location.href='/mfi-lender';
+      window.location.href='/buy-security';
     }
   }
 }

@@ -12,14 +12,14 @@
                     <th style="width: 200px;">Unit Price</th>
                     <th>Action</th>
                 </tr>
-                <tr>
-                    <td>12345</td>
-                    <td>15000</td>
-                    <td><input type="text" class="form-control"></td>
+                <tr *ngFor="let element of data">
+                    <td>{{element.LOAN_ID}}</td>
+                    <td>{{element.LOAN_AMOUNT}}</td>
+                    <td><input #parent type="text" class="form-control"></td>
                     <td>
-                        <a class="btn btn-primary btn-xs" href="success-message">
+                        <button class="btn btn-primary btn-xs" (click)="securitize(element,parent)">
                             Securitize
-                        </a>
+                        </button>
                     </td>
                 </tr>
             </table>

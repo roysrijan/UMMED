@@ -7,35 +7,67 @@
 
             <table class="table table-bordered">
                 <tr>
+                    <th>Loan No</th>
                     <th>MFI Name</th>
-                    <th>Scheme Name</th>
                     <th>Unit Price</th>
                     <th style="width: 200px;">Quantity</th>
                     <th>Action</th>
                 </tr>
-                <tr>
-                    <td>Annapurna MFI</td>
-                    <td>Agri Pro</td>
-                    <td>100</td>
-                    <td><input type="text" class="form-control"></td>
+                <tr *ngFor="let element of data">
+                    <td>{{element.LOAN_ID}}</td>
+                    <td>{{element.MFI_LENDER}}</td>
+                    <td>{{element.SECURITY_AMOUNT}}</td>
+                    <td><input #parent type="text" class="form-control"></td>
                     <td>
-                        <a class="btn btn-primary btn-xs" href="success-message">
+                        <button class="btn btn-primary btn-xs" (click)="buy(element,parent)">
                             Buy
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ABCD MFI</td>
-                    <td>Business Pro</td>
-                    <td>120</td>
-                    <td><input type="text" class="form-control"></td>
-                    <td>
-                        <a class="btn btn-primary btn-xs" href="success-message">
-                            Buy
-                        </a>
+                        </button>
+                        <button 
+                          class="btn btn-primary btn-xs"
+                          style="margin-left: 1em;"
+                          (click)="setLoadDeatils(element)"
+                          data-toggle="modal"
+                          data-target="#schemeModal"
+                        >
+                            View
+                        </button>
                     </td>
                 </tr>
             </table>
         </div>
     </div>
+</div>
+
+<div
+  *ngIf="loanDetails"
+  class="modal fade"
+  id="schemeModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="schemeModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Suswastho Scheme</h4>
+      </div>
+      <div class="modal-body">
+        <p>Max Loan Amount: {{loanDetails?.LOAN_AMOUNT}}</p>
+        <p>Max Tenure: {{loanDetails?.NUMBER_OF_EMI/12}} years</p>
+        <p>Interent rate: {{loanDetails?.INTEREST_RATE}}%</p>
+        <p>Borrower Name: {{loanDetails?.BORROWER_NAME}}</p>
+        <p>Borrower Address: {{loanDetails?.BORROWER_ADDRESS}}</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary btn-sm"
+          data-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
